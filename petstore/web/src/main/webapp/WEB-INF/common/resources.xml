@@ -28,12 +28,12 @@
 
         <!-- 图片上传目录：/petstore/upload -->
         <resource pattern="/petstore/upload">
-            <res-loaders:file-loader basedir="$petstore_upload" />
+            <res-loaders:file-loader basedir="${petstore_upload}" />
         </resource>
 
         <!-- 图片显示目录：/petstore/images，先在upload目录中找，然后在应用里找 -->
         <resource pattern="/petstore/images">
-            <res-loaders:file-loader basedir="$petstore_upload" />
+            <res-loaders:file-loader basedir="${petstore_upload}" />
             <res-loaders:super-loader name="/webroot/store/images" />
         </resource>
 
